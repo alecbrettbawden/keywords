@@ -8,7 +8,7 @@ Each entry in the xml file looks like this:
     <Keyword>customer service</Keyword>
 </Item>
 ```
-From these keyword strings you should map out each terms 1, 2, and 3 degree relations.
+From these keyword strings you should map out each unique terms 1, 2, and 3 degree relations.
 <br/>For example if this were our entire dataset:<br/>
 `customer service`<br/>
 `customer success service`<br/>
@@ -22,8 +22,8 @@ The 2 degree relation would contain all of the terms that are 1 degree with rela
 **{ 'manager': 1, 'resources': 1 }**<br/>
 And the 3 degree follows the same pattern where any term in the 2 degree's 1 degree (and is not the term itself or contained in 1 degree or 2 degree) is added:<br/>
 **{ 'desk': 1 }**<br/>
+*You'll notice that these maps should be in descending order with the term with the highest count first*<br/>
 
-<br/>*You'll notice that these maps should be in descending order with the term with the highest count first*<br/>
 I would expect the output csv/xlsx/xml file to look something like this (numbers and terms are made up):
 Term | 1 Degree | 2 Degree | 3 Degree
 --- | --- | --- | ---
