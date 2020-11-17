@@ -9,7 +9,7 @@ Each entry in the xml file looks like this:
     <Keyword><![CDATA[customer service -0x83e3d58e80ab5964c3cdf81887e60390]]></Keyword>
 </Item>
 ```
-<br/>Your first step will be to remove the hex hash that follows the *-* along with the *-* itself and any leading or trailing whitespace.<br/>
+Your first step will be to remove the hex hash that follows the *-* along with the *-* itself and any leading or trailing whitespace.<br/><br/>
 From these parsed keyword strings you should map out each unique terms 1, 2, and 3 degree relations.
 <br/>For example if this were our entire dataset:<br/><br/>
 `customer service`<br/>
