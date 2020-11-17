@@ -1,6 +1,7 @@
 # keywords
 
 ## Instructions
+### Please use python3 for this problem if possible
 For this problem I would like you to recreate, in a way, the ["6 degrees of Kevin Bacon"](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon) but for these keyword groups contained in the .gz xml file in this repo.
 Each entry in the xml file looks like this:
 ```xml
@@ -23,12 +24,11 @@ The 2 degree relation would contain all of the terms that are 1 degree with rela
 And the 3 degree follows the same pattern where any term in the 2 degree's 1 degree (and is not the term itself or contained in 1 degree or 2 degree) is added:<br/>
 **{ 'desk': 1 }**<br/>
 *You'll notice that these maps should be in descending order with the term with the highest count first*<br/>
-
-I would expect the output csv/xlsx/xml file to look something like this (numbers and terms are made up):
+Once you have calculated the 1, 2, and 3 degree relations for each term you should write that data to a csv or xlsx or xml file. Whichever you prefer.
+I would expect the output csv/xlsx/xml file to look something like this (I've only done the term "customer" for you, there would be 6 rows in this example, 1 for each unique term in the dataset):
 Term | 1 Degree | 2 Degree | 3 Degree
 --- | --- | --- | ---
-customer | { 'service': 9, 'success': 2, 'desk': 1 } | { 'sales': 45, 'management': 21 } | { 'engineering': 2 }
-pet | { 'care': 23, 'hotel': 5 } | { 'grooming': 34, 'science': 10 } | { 'sales': 76, 'reminder': 6 }
+customer | { 'service': 2, 'success': 1 } | { 'manager': 1, 'resources': 1 } | { 'desk': 1 }
 
 
 
