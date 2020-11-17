@@ -12,21 +12,21 @@ From these parsed keyword strings you should map out each unique terms 1, 2, and
 <br/>For example if this were our entire dataset:<br/>
 ```xml
 <ItemList>
-<Item>
-    <Keyword><![CDATA[customer service -0x83e3d58e80ab5964c3cdf81887e60390]]></Keyword>
-</Item>
-<Item>
-    <Keyword><![CDATA[customer success service -0x5f173ba9e87de36c3565787bc796e567]]></Keyword>
-</Item>
-<Item>
-    <Keyword><![CDATA[service manager -0xec85a8c18dc8e59d37b97fff7f82f023]]></Keyword>
-</Item>
-<Item>
-    <Keyword><![CDATA[success resources -0x1db98978e4fbd9e757a96c7f3f6c33d9]]></Keyword>
-</Item>
-<Item>
-    <Keyword><![CDATA[desk manager -0xeb66e4356d472c60cc11abe1497b37da]]></Keyword>
-</Item>
+    <Item>
+        <Keyword><![CDATA[customer service -0x83e3d58e80ab5964c3cdf81887e60390]]></Keyword>
+    </Item>
+    <Item>
+        <Keyword><![CDATA[customer success service -0x5f173ba9e87de36c3565787bc796e567]]></Keyword>
+    </Item>
+    <Item>
+        <Keyword><![CDATA[service manager -0xec85a8c18dc8e59d37b97fff7f82f023]]></Keyword>
+    </Item>
+    <Item>
+        <Keyword><![CDATA[success resources -0x1db98978e4fbd9e757a96c7f3f6c33d9]]></Keyword>
+    </Item>
+    <Item>
+        <Keyword><![CDATA[desk manager -0xeb66e4356d472c60cc11abe1497b37da]]></Keyword>
+    </Item>
 </ItemList>
 ```
 For the term **customer** its 1 degree relation would be a map from unique term to count of each term that appears in the same keyword string as **customer**:<br/>
