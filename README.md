@@ -6,10 +6,11 @@ For this problem I would like you to recreate, in a way, the ["6 degrees of Kevi
 Each entry in the xml file looks like this:
 ```xml
 <Item>
-    <Keyword>customer service</Keyword>
+    <Keyword><![CDATA[customer service -0x83e3d58e80ab5964c3cdf81887e60390]]></Keyword>
 </Item>
 ```
-From these keyword strings you should map out each unique terms 1, 2, and 3 degree relations.
+<br/>Your first step will be to remove the hex hash that follows the *-* along with the *-* itself and any leading or trailing whitespace.<br/>
+From these parsed keyword strings you should map out each unique terms 1, 2, and 3 degree relations.
 <br/>For example if this were our entire dataset:<br/><br/>
 `customer service`<br/>
 `customer success service`<br/>
@@ -17,9 +18,9 @@ From these keyword strings you should map out each unique terms 1, 2, and 3 degr
 `success resources`<br/>
 `desk manager`<br/><br/>
 For the term "customer" its 1 degree relation would be a map from term to count of each term that appears in the same keyword string as "customer":<br/>
-**{ 'service': 2, 'success': 1 }**<br/><br/>
+**{ 'service': 2, 'success': 1 }**<br/>
 Since service appears twice in the same keyword string as customer its count is 2, while success only appears once so its count is 1.<br/><br/>
-The 2 degree relation would contain all of the terms that are 1 degree with relations with any terms in customers' 1 degree (and that aren't the term itself or contained in 1 degree):<br/>
+The 2 degree relation would contain all of the terms that are 1 degree relations with any terms in customers' 1 degree (and that aren't the term itself or contained in customers' 1 degree):<br/>
 **{ 'manager': 1, 'resources': 1 }**<br/><br/>
 And the 3 degree follows the same pattern where any term in the 2 degree's 1 degree (and is not the term itself or contained in 1 degree or 2 degree) is added:<br/>
 **{ 'desk': 1 }**<br/><br/>
