@@ -1,7 +1,5 @@
-# keywords
-
-## Instructions
-### Please use python3 for this problem if possible
+# Instructions
+## Please use python3 for this problem if possible
 For this problem I would like you to recreate, in a way, the ["6 degrees of Kevin Bacon"](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon) but for these keyword groups contained in the .gz xml file in this repo.
 Each entry in the xml file looks like this:
 ```xml
@@ -11,7 +9,7 @@ Each entry in the xml file looks like this:
 ```
 Your first step will be to remove the hex hash that follows the *-* along with the *-* itself and any leading or trailing whitespace. You should be left with just the keyword string and now other characters or extra whitespace.<br/><br/>
 From these parsed keyword strings you should map out each unique terms 1, 2, and 3 degree relations.
-<br/>For example if this were our entire dataset:<br/><br/>
+<br/>For example if this were our entire dataset:<br/>
 ```xml
 <Item>
     <Keyword><![CDATA[customer service -0x83e3d58e80ab5964c3cdf81887e60390]]></Keyword>
